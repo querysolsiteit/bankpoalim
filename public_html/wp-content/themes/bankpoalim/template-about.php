@@ -9,7 +9,6 @@
 <div id="content" class="wrapper wrapper--mobile-paddingless about">
 
     <?php while (have_posts()) : the_post(); ?>
-
     <div class="row row--equal-height row--lg">
         <div class="col col-2-3 col-about white-bg">
             <div class="dp">

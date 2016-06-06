@@ -46,17 +46,27 @@
         </div>
         <div class="fixed-col">
             <div class="link--with-img">
-            <div style="background-image: url(<?php echo THEME; ?>/images/online-banking.png)" class="link-bg"></div><a href="#" alt="" class="db dp">
-            <header class="heading heading--md heading--white">
-              <h2 class="heading-h"><span class="heading-title">Online</span><span class="heading-tagline">Banking<img src="<?php echo THEME; ?>/images/icons/chevron-right-thin-w.png" alt="" class="icon"/></span></h2>
-            </header></a>
+                <div style="background-image: url(<?php echo THEME; ?>/images/online-banking.png)" class="link-bg"></div>
+                <a href="#" alt="" class="db dp">
+                    <header class="heading heading--md heading--white">
+                      <h2 class="heading-h"><span class="heading-title">Online</span>
+                          <span class="heading-tagline">Banking
+                              <img src="<?php echo THEME; ?>/images/icons/chevron-right-thin-w.png" alt="" class="icon"/>
+                          </span>
+                      </h2>
+                    </header>
+                </a>
             </div>
             <div class="link--with-img">
-            <div style="background-image: url(<?php echo THEME; ?>/images/get-started-bg.png)" class="link-bg"></div><a href="#" alt="" class="db dp">
-            <header class="heading heading--md heading--white">
-              <h2 class="heading-h"><span class="heading-title">Let's Get</span><span class="heading-tagline">Started</span></h2>
-            </header>
-            <p class="link-text">QUAMOP is a center for quantum physics using atomic molecular</p></a>
+                <div style="background-image: url(<?php echo THEME; ?>/images/get-started-bg.png)" class="link-bg"></div>
+                <a href="#" alt="" class="db dp">
+                    <header class="heading heading--md heading--white">
+                      <h2 class="heading-h">
+                          <span class="heading-title">Let's Get</span>
+                          <span class="heading-tagline">Started</span></h2>
+                    </header>
+                    <p class="link-text">QUAMOP is a center for quantum physics using atomic molecular</p>
+                </a>
             </div>
         </div>
     </div>
