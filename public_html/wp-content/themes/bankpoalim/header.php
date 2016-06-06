@@ -13,8 +13,6 @@
 			var ThemeUrl = '<?php echo THEME; ?>';
 		</script>
 	</head>
-	
-	<!-- rtrtyrt -->
 	<body <?php body_class(); ?>>
 		<!-- Start html -->
 			<?php get_template_part('inc/header/mod','accessibility');?>
@@ -34,18 +32,23 @@
 						  </li>
 			  			<span class="top-bar-divider">|</span>
 						<?php
-						/*
 							$top_right_links = get_field('top_right_links','option');
 							if(!empty($top_right_links)):
-								foreach ($top_right_links as $top_link):
-									$top_title        = $top_link['title'];
-									$top_link         = $top_link['link_to'];
-									$hide_in_home = $top_link['hide_in_homepage'];
+								foreach ($top_right_links as $item):
+									$top_title       = $item['title'];
+									$top_link        = $item['link_to'];
+									$display_in_home = $item['display_only_at_homepage'];
 									?>
-								  <li class="dib"><a href="<?php echo $top_link;?>" class="db top-bar-link"><?php echo $top_title;?></a></li>
+									<?php if(is_home() || is_front_page()): ?>
+										<?php if($display_in_home): ?>
+									  		<li class="dib"><a href="<?php echo $top_link;?>" class="db top-bar-link"><?php echo $top_title;?></a></li>
+								  		<?php endif; ?>
+									<?php else: ?>
+										<li class="dib"><a href="<?php echo $top_link;?>" class="db top-bar-link"><?php echo $top_title;?></a></li>
+								  <?php endif; ?>
 				  			<?php endforeach; ?>
 			  			<?php endif; ?>
-						*/?>
+
 					</div>
 					<?php get_search_form();?>
 				  </ul>
