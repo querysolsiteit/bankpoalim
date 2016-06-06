@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BHI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet" type="text/css">
+    <!-- styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="wrapper relative">
+      <!-- to prevent autofocus on windows-->
+      
+      <nav class="accessible-nav"><a id="first-a-link" href="#content" tabindex="1" class="accessible-nav-link">Jump to content</a><a href="#page-footer" tabindex="1" class="accessible-nav-link">Jump to footer</a><a href="./home.html" tabindex="1" class="accessible-nav-link">Go to homepage</a></nav>
+    </div>
+    <script>
+      document.getElementById('first-a-link').blur();
+      
+      
+    </script>
+    <header id="page-header" class="header">
+      <nav aria-label="Top Navigation" role="navigation" class="top-bar">
+        <div class="wrapper">
+          <ul class="dib top-bar-ul top-bar-left">
+            <li class="dib"><a href="#" class="db top-bar-link">Main website</a></li>
+            <li class="dib"><a href="#" class="db top-bar-link active">Corporate</a></li>
+            <li class="dib"><a href="#" class="db top-bar-link">Private</a></li>
+          </ul>
+          <ul class="dib top-bar-ul top-bar-right transformed">
+            <div id="right-group" class="right-group dib">
+              <li class="dib"><a href="#" class="db top-bar-link">Contact Us</a></li><span class="top-bar-divider">|</span>
+              <li class="dib"><a href="#" class="db top-bar-link">FAQs</a></li><span class="top-bar-divider">|</span>
+              <li class="dib"><a href="#" class="db top-bar-link">FACTA</a></li>
+            </div>
+            <li class="dib search-input-wrapper">
+              <input id="search-input" type="text" placeholder="Search" role="search" aria-label="Search" class="input-reset search-input"/>
+            </li>
+            <li class="dib"><a id="search-toggle" href="#" aria-label="Search button" class="db top-bar-link search"><img src="images/icons/search.png" alt="" class="icon"/></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="main-nav-waypoint"></div>
+      <nav id="main-nav" aria-label="Main Navigation" role="navigation" class="main-nav">
+        <div class="wrapper">
+          <ul class="row row--with-dividers">
+            <li class="col col-1-6"><a href="#" class="db main-nav-link logo-link"><img src="images/global-logo.png" alt="Homepage link" class="fluid"/></a></li>
+            <li class="col col-1-6"><a href="#" class="db main-nav-link">
+                <div class="inner-link-wrapper">
+                  <p>Who</p>
+                  <p>We Are</p>
+                </div></a></li>
+            <li class="col col-1-6"><a href="#" class="db main-nav-link">
+                <div class="inner-link-wrapper">
+                  <p>Our</p>
+                  <p>Team</p>
+                </div></a></li>
+            <li class="col col-1-6"><a href="#" class="db main-nav-link">
+                <div class="inner-link-wrapper">
+                  <p>Our</p>
+                  <p>Location</p>
+                </div></a></li>
+            <li class="col col-2-6">
+              <div class="row">
+                <div class="fixed-width"><a href="#" class="db main-nav-link login-link align-center">
+                    <div class="inner-link-wrapper"><img src="images/user.png" alt="" class="login-img"/>
+                      <p>
+                         
+                        Login<img src="images/icons/chevron-down.png" alt="" class="icon"/>
+                      </p>
+                    </div></a></div>
+                <div class="collapsable"><a href="#" class="db main-nav-link active">
+                    <div class="inner-link-wrapper">
+                      <p>Bank Hapoalim</p>
+                      <p>Group</p>
+                    </div></a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav aria-label="Mobile Navigation" role="navigation" class="mobile-nav">
+        <div class="wrapper clearfix">
+          <div class="mobile-bar-left"><img id="mobile-logo" src="images/global-logo--mobile.png" alt="" class="vam mobile-logo"/>
+            <button id="new-nav-toggle" href="#" class="btn btn-blank db mobile-bar-link menu-toggle"><img src="images/icons/bars.png" alt="" class="icon icon-bars"/></button>
+          </div>
+          <ul class="mobile-bar-right">
+            <li class="vam dib"><a href="#" class="db mobile-bar-link"><img src="images/icons/user.png" alt="" class="icon"/></a></li>
+            <li class="vam dib">
+              <button id="toggle-nav" href="#" class="btn btn-blank db mobile-bar-link"><img src="images/icons/bars.png" alt="" class="icon icon-bars"/></button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <aside id="mobile-nav" class="mobile-nav-links">
+        <ul>
+          <div class="mobile-search-wrapper">
+            <input type="text" placeholder="Search" class="input-reset search-mobile"/><img src="images/icons/search-black.png" alt="" class="icon search-label"/>
+          </div>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/home.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Home Page</span></a></li>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/industry.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Industry Expertise</span></a></li>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/commercial.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Commercial Banking</span></a></li>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/liquidity.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Liquidity Management</span></a></li>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/cash.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Cash Management</span></a></li>
+          <li><a href="#" class="db mobile-nav-link"><img src="images/icons/online.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Online Banking</span></a></li>
+          <li class="relative"><a href="#" class="db mobile-nav-link gray"><img src="images/icons/who-we.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Who we are</span></a>
+            <button data-toggle="subnav" data-target="#subnav-1" class="btn btn-blank btn-toggle-subnav"><img src="images/icons/chevron-right.png" alt="" class="vam icon"/></button>
+          </li>
+          <div id="subnav-1" class="subnav">
+            <li><a href="#" class="db mobile-nav-link gray-dark"><span class="mobile-nav-tagline">Our commitment</span></a></li>
+            <li><a href="#" class="db mobile-nav-link gray-dark"><span class="mobile-nav-tagline">Community Involvement</span></a></li>
+            <li><a href="#" class="db mobile-nav-link gray-dark"><span class="mobile-nav-tagline">Client Testimonials</span></a></li>
+          </div>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/team.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Our Team</span></a></li>
+          <li class="relative"><a href="#" class="db mobile-nav-link gray"><img src="images/icons/location.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Our Locations</span></a>
+            <button data-toggle="subnav" data-target="#subnav-2" class="btn btn-blank btn-toggle-subnav"><img src="images/icons/chevron-right.png" alt="" class="vam icon"/></button>
+          </li>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/group.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Bank Hapoalim Group</span></a></li>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/contact.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Contact Us</span></a></li>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/faq.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">FAQs</span></a></li>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/facta.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">FACTA</span></a></li>
+          <li><a href="#" class="db mobile-nav-link gray"><img src="images/icons/private.png" alt="" class="vam icon mobile-nav-icon"/><span class="vam mobile-nav-tagline">Private Banking</span></a></li>
+        </ul>
+      </aside>
+      <div style="background-image: url(images/header-bg--industry.png)" class="header-bg header-bg--corporate"></div>
+      <div id="second-nav-waypoint"></div>
+      <nav id="second-nav" aria-label="Secondary Navigation" role="navigation" class="second-nav">
+        <div class="transition-wrapper">
+          <div class="wrapper">
+            <ul class="row row--with-dividers row--equal-height-flex">
+              <li class="col col-1-5"><a href="#" class="db fluid second-nav-link align-center">
+                  <div class="inner-link-wrapper">
+                    <div class="img-wrapper"><img src="images/second-nav-icon-1.png" alt=""/></div>
+                    <p> <span>Specialty </span><span>Banking</span></p>
+                  </div></a></li>
+              <li class="col col-1-5"><a href="#" class="db fluid second-nav-link align-center">
+                  <div class="inner-link-wrapper">
+                    <div class="img-wrapper"><img src="images/second-nav-icon-2.png" alt=""/></div>
+                    <p> <span>Commercial </span><span>Banking</span></p>
+                  </div></a></li>
+              <li class="col col-1-5"><a href="#" class="db fluid second-nav-link align-center">
+                  <div class="inner-link-wrapper">
+                    <div class="img-wrapper"><img src="images/second-nav-icon-3.png" alt=""/></div>
+                    <p> <span>Liquidity </span><span>Management</span></p>
+                  </div></a></li>
+              <li class="col col-1-5"><a href="#" class="db fluid second-nav-link align-center">
+                  <div class="inner-link-wrapper">
+                    <div class="img-wrapper"><img src="images/second-nav-icon-4.png" alt=""/></div>
+                    <p> <span>Cash </span><span>Management</span></p>
+                  </div></a></li>
+              <li class="col col-1-5"><a href="#" class="db fluid second-nav-link align-center">
+                  <div class="inner-link-wrapper">
+                    <div class="img-wrapper"><img src="images/second-nav-icon-5.png" alt=""/></div>
+                    <p> <span>Online </span><span>Banking</span></p>
+                  </div></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="content" class="wrapper wrapper--mobile-paddingless industry-page">
+      <div class="dp white-bg mb-60">
+        <div class="row row--with-gutter row--xl">
+          <div class="col col-title">
+            <header class="heading heading--lg">
+              <h1 class="heading-title">Food & Commodities</h1>
+            </header>
+          </div>
+          <div class="col col-summary">
+            <p class="body-text body-text--lg"><strong>QUAMOP is a center for quantum physics using atomic molecular and optical systems at the Weizmann Institute of Sceince.</strong></p>
+            <p class="body-text">Contemporary topics in AMO physics. QUAMOP scientists publish multiple scientific publications in leading journals annually. There are seven active ERC grants in QUAMP groups. The center head in Prof. Yaron Silberberg. QUAMOP is a center for quantum physics using atomic molecular and optical systems at the Weizmann Institute of Sceince, </p>
+            <ul class="ul-theme">
+              <li>Rocksy the raccoon knows how to get the best results when looking for treats.</li>
+              <li>Instead of being sneaky and trying to steal food out of the cat bowl, Rocksy has</li>
+              <li>For those times of bewilderment, Fiddy shows his love for his favorite commentators by giving them fun </li>
+            </ul>
+          </div>
+          <div class="col col-get-started">
+            <div class="get-started">
+              <div class="dp">
+                <header class="heading heading--xs heading--no-stripe">
+                  <h4 class="heading-title"><span>Let's Get</span><span>Started</span></h4>
+                </header>
+                <p class="body-text body-text--lg">QUAMOP is a center for quantum physics using atomic molecular and optical systems at the Weizmann </p><a href="#" class="btn btn-gray btn--compact db with-chevron">Contact Logan<img src="images/icons/chevron-right-thin.png" alt="" class="icon"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="white-bg industry-page services-tailored">
+      <div class="wrapper">
+        <header class="heading heading--md heading--centered">
+          <h2 class="heading-title">Services tailored for you</h2>
+          <p class="body-text body-text--lg">BHI’s Global Reach is Tailored to its Client’s Needs BHI’s Global Reach is Tailored to its Client’s Needs</p>
+        </header>
+        <div class="row row--lg row--with-gutter">
+          <div class="col col-1-3">
+            <figure tabindex="2" class="hover-item"><a href="#" alt="" class="db"><img src="images/industry-hover-1.png" alt="" class="fluid"/>
+                <figcaption class="heading heading--xs heading--no-stripe dark">
+                  <h6 class="heading-h"><span class="heading-title">Commercial</span><span class="heading-tagline">Banking</span>
+                  </h6>
+                  <p class="description-text">As a client actively interested in financial markets, you benefit most from </p>
+                </figcaption></a></figure>
+          </div>
+          <div class="col col-1-3">
+            <figure tabindex="2" class="hover-item"><a href="#" alt="" class="db"><img src="images/industry-hover-2.png" alt="" class="fluid"/>
+                <figcaption class="heading heading--xs heading--no-stripe red">
+                  <h6 class="heading-h"><span class="heading-title">Liquidity</span><span class="heading-tagline">Management</span>
+                  </h6>
+                  <p class="description-text">As a client actively interested in financial markets, you benefit most from </p>
+                </figcaption></a></figure>
+          </div>
+          <div class="col col-1-3">
+            <figure tabindex="2" class="hover-item"><a href="#" alt="" class="db"><img src="images/industry-hover-3.png" alt="" class="fluid"/>
+                <figcaption class="heading heading--xs heading--no-stripe bright">
+                  <h6 class="heading-h"><span class="heading-title">Treasury</span><span class="heading-tagline">Soultion</span>
+                  </h6>
+                  <p class="description-text">As a client actively interested in financial markets, you benefit most from </p>
+                </figcaption></a></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper industry-page gray-part">
+      <div class="row row--with-less-gutter row--with-fixed-column">
+        <div class="col col-slider-text">
+          <header class="heading heading--md">
+            <h2 class="heading-h"><span class="heading-title">Specialty</span><span class="heading-tagline">Banking</span></h2>
+          </header>
+          <p class="body-text body-text--lg">BHI’s Global Reach is Tailored to its Client’s Needs BHI’s Global Reach is Tailored to its Client’s Needs</p>
+          <div class="slider-arrows-wrapper">
+            <button class="btn btn-slider-arrow left theme"><span class="fz-0">Previous</span><img src="images/icons/slick-left.png" alt="" class="icon"></button>
+            <button class="btn btn-slider-arrow right gray"><span class="fz-0">Next</span><img src="images/icons/slick-right.png" alt="" class="icon"></button>
+          </div>
+        </div>
+        <div id="industry-page-slider" class="col col-slick-slider"><a href="#" alt="" class="industry-page-item"><img src="images/industry-slide-1.png" alt="" class="item-thumb"/>
+            <div class="dp">
+              <header class="heading heading--xs">
+                <h5 class="heading-h"><span class="heading-title">Food &amp;</span><span class="heading-tagline">Commodities</span></h5>
+              </header>
+            </div></a><a href="#" alt="" class="industry-page-item"><img src="images/industry-slide-2.png" alt="" class="item-thumb"/>
+            <div class="dp">
+              <header class="heading heading--xs">
+                <h5 class="heading-h"><span class="heading-title">Commercial</span><span class="heading-tagline">Real Estate</span></h5>
+              </header>
+            </div></a><a href="#" alt="" class="industry-page-item"><img src="images/industry-slide-3.png" alt="" class="item-thumb"/>
+            <div class="dp">
+              <header class="heading heading--xs">
+                <h5 class="heading-h"><span class="heading-title">High</span><span class="heading-tagline">Tech</span></h5>
+              </header>
+            </div></a><a href="#" alt="" class="industry-page-item"><img src="images/industry-slide-2.png" alt="" class="item-thumb"/>
+            <div class="dp">
+              <header class="heading heading--xs">
+                <h5 class="heading-h"><span class="heading-title">High</span><span class="heading-tagline">Commodities</span></h5>
+              </header>
+            </div></a>
+        </div>
+      </div>
+    </div>
+    <footer id="page-footer" class="footer">
+      <div class="wrapper">
+        <ul class="footer-links-block">
+          <li class="dib"><a href="#" class="footer-block-link">Careers   </a></li>
+          <li class="dib"><a href="#" class="footer-block-link">Terms & Condintions   </a></li>
+          <li class="dib"><a href="#" class="footer-block-link">Privacy & Security </a></li>
+          <li class="dib"><a href="#" class="footer-block-link">Accessibility Statement </a></li>
+          <li class="dib"><a href="#" class="footer-block-link">Bank Hapoalim </a></li>
+        </ul>
+        <p class="body-text">Services and products are subject to local laws and regulations and may not be offered in each jurisdiction. For example, investment services are not being offered in the United States or to US Persons except via our US licensed business (www.bhiusa.com) unless explicitly noted otherwise and are being offered only to Canadian customers who qualify as "permitted clients" (as that term is defined under Canadian law</p>
+        <ul class="row row--with-more-gutter row--lg footer-links-row">
+          <li class="col col-1-5">
+            <h5 class="footer-links-title">Specialty Banking</h5>
+            <ul>
+              <li><a href="#" class="db links-row-link">Commercial Real Estate</a></li>
+              <li><a href="#" class="db links-row-link">High Tech</a></li>
+              <li><a href="#" class="db links-row-link">Food & Commodities</a></li>
+              <li><a href="#" class="db links-row-link">Israeli Corporate</a></li>
+              <li><a href="#" class="db links-row-link">Entertainment</a></li>
+            </ul>
+          </li>
+          <li class="col col-1-5">
+            <h5 class="footer-links-title">Commercial Banking</h5>
+            <ul>
+              <li><a href="#" class="db links-row-link">Commercial Lending</a></li>
+              <li><a href="#" class="db links-row-link">Commercial Real Estate Financing</a></li>
+              <li><a href="#" class="db links-row-link">Asset Based Lending</a></li>
+              <li><a href="#" class="db links-row-link">Brand Financing</a></li>
+              <li><a href="#" class="db links-row-link">Corporate Syndications</a></li>
+            </ul>
+          </li>
+          <li class="col col-1-5">
+            <h5 class="footer-links-title">Liquidity Management</h5>
+            <ul>
+              <li><a href="#" class="db links-row-link">Corporate Treasury Tool</a></li>
+              <li><a href="#" class="db links-row-link">Brokerage Services</a></li>
+            </ul>
+          </li>
+          <li class="col col-1-5">
+            <h5 class="footer-links-title">Liquidity Management</h5>
+            <ul>
+              <li><a href="#" class="db links-row-link">Receivables Solutions</a></li>
+              <li><a href="#" class="db links-row-link">Payable Solutions</a></li>
+              <li><a href="#" class="db links-row-link">Global Solutions</a></li>
+              <li><a href="#" class="db links-row-link">Online Banking</a></li>
+            </ul>
+          </li>
+          <li class="col col-1-5">
+            <h5 class="footer-links-title">Online Banking</h5>
+            <ul>
+              <li><a href="#" class="db links-row-link">Digital Services</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">All rights reserved to BHI 2015</div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="js/client.js"></script>
+  </body>
+</html>
