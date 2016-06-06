@@ -13,6 +13,8 @@
 			var ThemeUrl = '<?php echo THEME; ?>';
 		</script>
 	</head>
+	
+	<!-- rtrtyrt -->
 	<body <?php body_class(); ?>>
 		<!-- Start html -->
 			<?php get_template_part('inc/header/mod','accessibility');?>
