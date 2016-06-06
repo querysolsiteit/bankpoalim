@@ -2,7 +2,7 @@
 
 <?php
     $main_title      = get_field('page_title') ? get_field('page_title') : get_the_title($post->ID);
-    $main_tagline    = get_field('page_tagline');
+    $main_subtitle    = get_field('page_subtitle');
     $read_more_link  = get_field('content_read_more_link') ? get_field('content_read_more_link') : "";
 ?>
 
@@ -18,8 +18,8 @@
                         <?php if($main_title): ?>
                             <span class="heading-title"><?php echo $main_title; ?></span>
                         <?php endif; ?>
-                        <?php if($main_tagline): ?>
-                            <span class="heading-tagline"><?php echo $main_tagline;?></span>
+                        <?php if($main_subtitle): ?>
+                            <span class="heading-tagline"><?php echo $main_subtitle;?></span>
                         <?php endif; ?>
                     </h2>
                 </header>

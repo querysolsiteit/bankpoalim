@@ -31,24 +31,7 @@
 							  <?php icl_post_languages(); ?>
 						  </li>
 			  			<span class="top-bar-divider">|</span>
-						<?php
-							$top_right_links = get_field('top_right_links','option');
-							if(!empty($top_right_links)):
-								foreach ($top_right_links as $item):
-									$top_title       = $item['title'];
-									$top_link        = $item['link_to'];
-									$display_in_home = $item['display_only_at_homepage'];
-									?>
-									<?php if(is_home() || is_front_page()): ?>
-										<?php if($display_in_home): ?>
-									  		<li class="dib"><a href="<?php echo $top_link;?>" class="db top-bar-link"><?php echo $top_title;?></a></li>
-								  		<?php endif; ?>
-									<?php else: ?>
-										<li class="dib"><a href="<?php echo $top_link;?>" class="db top-bar-link"><?php echo $top_title;?></a></li>
-								  <?php endif; ?>
-				  			<?php endforeach; ?>
-			  			<?php endif; ?>
-
+						<?php get_template_part('inc/header/top','right-menu');?>
 					</div>
 					<?php get_search_form();?>
 				  </ul>

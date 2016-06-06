@@ -1,4 +1,4 @@
-<?php if(is_home() || is_front_page()):?>
+<?php //if(is_home() || is_front_page()):?>
     <div class="wrapper relative">
       <!-- to prevent autofocus on windows-->
       <?php
@@ -13,4 +13,4 @@
     <script>
         document.getElementById('first-a-link').blur();
     </script>
-<?php endif; ?>
+<?php //endif; ?>
