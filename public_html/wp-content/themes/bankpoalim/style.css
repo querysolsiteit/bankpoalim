@@ -22,13 +22,6 @@
   src: url("fonts/1475972/1c24e174-d1d8-49de-98ac-09d77eccf0e7.eot?#iefix");
   src: url("fonts/1475972/1c24e174-d1d8-49de-98ac-09d77eccf0e7.eot?#iefix") format("eot"), url("fonts/1475972/73d8af9e-4b82-4953-81a5-8941aed30297.woff2") format("woff2"), url("fonts/1475972/19ff06fe-d0c5-4294-a237-a4c9b85312b8.woff") format("woff"), url("fonts/1475972/ff00799e-9823-48a0-a789-5f2d2e509fd7.ttf") format("truetype"), url("fonts/1475972/a052218a-5e74-4425-982f-1213b7af380a.svg#a052218a-5e74-4425-982f-1213b7af380a") format("svg");
 }
-/* Clearfix
--------------------------------------------------------------- */
-.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
-.clearfix {display: inline-block;}
-html[xmlns] .clearfix {display: block;}
-* html .clearfix {height: 1%;}
-
 /* MISC
 -------------------------------------------------------------- */
 ::selection {
@@ -3084,6 +3077,7 @@ nav.top-bar form.search {
   padding: 40px 35px 30px;
   background: #f0f0f0;
   border-bottom: 5px solid #2b313e;
+  min-height: 309px;
 }
 .team-item-img {
   display: block;
@@ -3348,6 +3342,10 @@ nav.top-bar form.search {
 .mobile-services-summary {
   margin-bottom: 25px;
   max-width: 620px;
+}
+#mobile-services-slider{
+    height: 551px;
+    overflow: hidden;
 }
 .mobile-services-slider {
   position: relative;

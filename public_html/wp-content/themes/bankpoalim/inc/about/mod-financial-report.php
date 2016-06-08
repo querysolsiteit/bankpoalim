@@ -32,8 +32,8 @@
         <?php $k++; endforeach; ?>
         <?php endif; ?>
     </div>
-    <a href="#" class="read-more muted">
-        <span>To full financial reports</span>
+    <a <?php if($link_to){ echo 'href="'.$link_to.'"';}?> class="read-more muted">
+        <span><?php echo $link_text;?></span>
         <img src="<?php echo THEME;?>/images/icons/chevron-right-thin-w.png" alt="" class="icon">
     </a>
 </div>

@@ -15,10 +15,8 @@ if (function_exists('add_theme_support')){
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    // add_image_size('large', 700, '', true); // Large Thumbnail
-    // add_image_size('medium', 250, '', true); // Medium Thumbnail
-    // add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('page_top_banner',1920, 300, true); // Small Thumbnail
+    add_image_size('page_top_banner',1920, 300, true);
+    add_image_size('page_slider',600, 506, true);
 
 
     // Enables post and comment RSS feed links to head
@@ -170,6 +168,8 @@ function new_excerpt_length($length) {
     return 20;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+// custom language switcher
 function icl_post_languages(){
     $languages = icl_get_languages('skip_missing=0');
     if(count($languages) > 1){
@@ -184,4 +184,12 @@ function icl_post_languages(){
         echo $active_item.'<ul class="langs">'.join('', $langs).'</ul>';
     }
 }
-// custom language switcher
+
+// Custom Font Sizes for TinyMCE
+if ( ! function_exists( 'wpex_mce_text_sizes' ) ) {
+    function wpex_mce_text_sizes( $initArray ){
+        $initArray['fontsize_formats'] = "9px 10px 12px 13px 14px 16px 18px 20px 22px 24px 28px 32px 36px";
+        return $initArray;
+    }
+}
+add_filter( 'tiny_mce_before_init', 'wpex_mce_text_sizes' );

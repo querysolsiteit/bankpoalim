@@ -476,11 +476,13 @@
 			init: init
 		}
 	})();
+	
+	// jQuery(document).on("ready", function() {
+	// 	bhi.init();
+	// });
 
-	jQuery(document).on("ready", function() {
+	jQuery(window).on("load", function() {
 		bhi.init();
 	});
-
-
 
 })(jQuery);

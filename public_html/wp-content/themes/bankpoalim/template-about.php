@@ -1,8 +1,8 @@
 <?php /* Template Name: About */ get_header();?>
 
 <?php
-    $main_title      = get_field('page_title') ? get_field('page_title') : get_the_title($post->ID);
-    $main_subtitle    = get_field('page_subtitle');
+    $main_title      = get_field('main_page_title') ? get_field('main_page_title') : get_the_title($post->ID);
+    $main_subtitle    = get_field('main_page_subtitle');
     $read_more_link  = get_field('content_read_more_link') ? get_field('content_read_more_link') : "";
 ?>
 

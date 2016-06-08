@@ -1,2 +1,3 @@
-<?php /* Template Name:  צור קשר */ get_header();?>
+<?php /* Template Name:  Contact Us */ get_header();?>
+
 <?php get_footer();?>

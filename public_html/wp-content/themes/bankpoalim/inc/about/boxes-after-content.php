@@ -33,7 +33,7 @@
 
       ?>
     <div style="background-image: url(<?php echo $box_2_bg['url'];?>)" class="link-bg"></div>
-    <a href="<?php echo $box_2_link;?>" alt="" class="db dp">
+    <a <?php if($box_2_link){ echo 'href="'.$box_2_link.'"';}?> alt="" class="db dp">
       <header class="heading heading--md heading--semi-white">
         <h2 class="heading-h">
             <span class="heading-title"><?php echo $box_2_title;?></span>
@@ -51,7 +51,7 @@
           $box_3_bg      = get_field('box_03_bg_image');
       ?>
     <div style="background-image: url(<?php echo $box_3_bg['url'];?>)" class="link-bg"></div>
-    <a href="<?php echo $box_3_link;?>" alt="" class="db dp">
+    <a <?php if($box_3_link){ echo 'href="'.$box_3_link.'"';}?> alt="" class="db dp">
         <?php echo $box_3_content;?>
     </a>
   </li>

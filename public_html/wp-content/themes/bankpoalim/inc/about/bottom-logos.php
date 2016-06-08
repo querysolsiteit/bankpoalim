@@ -12,7 +12,7 @@
                         $image = $logo['logo'];
                         $link = $logo['link_to'] ? $logo['link_to']: '';
                     ?>
-                    <a href="<?php echo $link;?>" class="col col-1-3 align-center">
+                    <a <?php if($link){ echo 'href="'.$link.'"';}?> class="col col-1-3 align-center">
                         <img src="<?php echo $image['url'];?>" alt="<?php echo $title;?>">
                     </a>
             <?php endforeach; ?>
