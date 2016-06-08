@@ -65,7 +65,11 @@
 					if(is_page_template('template-main.php') || is_page_template('template-private.php')){
 						get_template_part('inc/home/mod','home-slider');
 					}
+					if(is_page_template('template-private.php')){
+						get_template_part('inc/header/mod','secondary-menu');
+					}
 
+					if(!is_page_template('template-main.php') && !is_page_template('template-private.php')){
 						get_template_part('inc/header/mod','page-banner');
 						get_template_part('inc/header/mod','secondary-menu');
 					}
