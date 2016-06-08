@@ -22,12 +22,7 @@
                         <?php endif; ?>
                     </h2>
                 </header>
-                <p class="body-text"><?php echo get_the_content();?></p>
-                <?php if($read_more_link): ?>
-                    <a href="<?php echo $read_more_link;?>" class="read-more"><span><?php _e('Read More','bank');?></span>
-                        <img src="<?php echo THEME;?>/images/icons/chevron-right-thin.png" alt="" class="icon">
-                    </a>
-                <?php endif; ?>
+                <div class="body-text"><?php the_content();?></div>
             </div>
           <?php get_template_part('inc/about/mod','financial-report'); ?>
         </div>

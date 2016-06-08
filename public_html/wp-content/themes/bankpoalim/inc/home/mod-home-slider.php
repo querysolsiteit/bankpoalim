@@ -27,14 +27,18 @@
             <img src="<?php echo THEME; ?>/images/icons/chevron-left-lg.png" alt="" class="icon"/>
         </button>
         <button class="btn btn-white btn-slider next">
-            <span class="fz-0">_e('Naxt','bank');</span>
+            <span class="fz-0"><?php _e('Naxt','bank');?></span>
             <img src="<?php echo THEME; ?>/images/icons/chevron-right-lg.png" alt="" class="icon"/>
         </button>
         <button class="btn btn-dark btn-slider pause">
-            <span class="fz-0">_e('Pause','bank');</span>
+            <span class="fz-0"><?php _e('Pause','bank');?></span>
             <img src="<?php echo THEME; ?>/images/icons/pause.png" alt="" class="icon"/>
         </button>
     </div>
-    <?php get_template_part('inc/home/mod','main-links-desktop'); ?>
+    <?php
+    if(is_page_template('template-main.php')){
+        get_template_part('inc/home/mod','main-links-desktop');
+    }
+    ?>
 </div>
 <?php endif;?>

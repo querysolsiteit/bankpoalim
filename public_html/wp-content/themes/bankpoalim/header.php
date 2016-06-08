@@ -15,13 +15,24 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<!-- Start html -->
-			<?php get_template_part('inc/header/mod','accessibility');?>
+		<?php get_template_part('inc/header/mod','accessibility');?>
 
-			<?php if(is_home() || is_front_page()): ?>
-				<header id="home-header" class="header home-header main-header">
-			<?php else: ?>
-				<header id="page-header" class="header">
-			<?php endif; ?>
+		<?php
+				if(is_page_template('template-main.php')){
+					$header_class = 'header home-header main-header';
+					$header_id = 'home-header';
+				}
+				elseif(is_page_template('template-private.php')){
+					$header_class = 'header header--private home-header';
+					$header_id = 'home-header';
+				}
+				else{
+					$header_class = 'header';
+					$header_id = 'page-header';
+				}
+			?>
+			<header id="<?php echo $header_id;?>" class="<?php echo $header_class;?>">
+
 			  <nav aria-label="Top Navigation" role="navigation" class="top-bar clearfix">
 				  <div class="wrapper">
 				  <?php get_template_part('inc/header/mod','global-websites'); ?>
@@ -51,11 +62,10 @@
 			  <?php
 					get_template_part('inc/header/mod','mobile-menu');
 
-					if(is_home() || is_front_page()){
+					if(is_page_template('template-main.php') || is_page_template('template-private.php')){
 						get_template_part('inc/home/mod','home-slider');
 					}
 
-					if(!is_home() && !is_front_page()){
 						get_template_part('inc/header/mod','page-banner');
 						get_template_part('inc/header/mod','secondary-menu');
 					}

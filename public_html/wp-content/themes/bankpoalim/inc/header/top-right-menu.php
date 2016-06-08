@@ -11,7 +11,7 @@ if(!empty($top_right_links)){
         $top_link        = $item['link_to'];
         $display_in_home = $item['display_only_at_homepage'];
 
-        if(is_home() || is_front_page()){
+        if(is_page_template('template-main.php') || is_page_template('template-private.php')){
             if($display_in_home){
                 echo '<li class="dib"><a href="'.$top_link.'" class="db top-bar-link">'.$top_title.'</a></li>';
             }
