@@ -1,4 +1,5 @@
 <?php
+
 add_shortcode('read_more','read_more_link_handler');
 function read_more_link_handler($atts) {
     extract(shortcode_atts(array(
@@ -15,7 +16,7 @@ function read_more_link_handler($atts) {
     return ob_get_clean();
 }
 
-/***********************/
+/**********************************************/
 add_shortcode('custom_button','custom_button_handler');
 function custom_button_handler($atts) {
     extract(shortcode_atts(array(

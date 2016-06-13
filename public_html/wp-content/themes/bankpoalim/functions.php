@@ -194,3 +194,16 @@ if ( ! function_exists( 'wpex_mce_text_sizes' ) ) {
     }
 }
 add_filter( 'tiny_mce_before_init', 'wpex_mce_text_sizes' );
+
+
+/**
+ * Allow shortcodes in Contact Form 7
+ *
+ * @author WPSnacks.com
+ * @link http://www.wpsnacks.com
+ */
+function shortcodes_in_cf7( $form ) {
+	$form = do_shortcode( $form );
+	return $form;
+}
+add_filter( 'wpcf7_form_elements', 'shortcodes_in_cf7' );

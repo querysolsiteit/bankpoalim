@@ -285,6 +285,10 @@
 			depth = 2;
 
 		$this.parents().eq(depth).fadeOut();
+		if($this.parents('.careers-form').length > 0 && $this.parents('#msg-sent-modal').length > 0){
+			$this.parents('.careers-form').fadeOut();
+			$this.parents('#msg-sent-modal').fadeOut();
+		}
 	}
 
 	// shows next modal
@@ -425,7 +429,7 @@
 		};
 
 		$contactForm.validate(params);
-		$careersForm.validate(params);
+		// $careersForm.validate(params);
 	}
 
 	// accordion on faq page
@@ -476,13 +480,35 @@
 			init: init
 		}
 	})();
-	
+
 	// jQuery(document).on("ready", function() {
 	// 	bhi.init();
 	// });
 
 	jQuery(window).on("load", function() {
 		bhi.init();
+		if(jQuery('#careers-modal').length > 0){
+			file_upload_click();
+			file_upload_change();
+		}
 	});
+
+	function file_upload_click(){
+		jQuery('#careers-modal #file_uploader_btn').click(function(){
+			var inputFile = jQuery('#careers-modal .file_uploader input[type="file"]');
+			inputFile.trigger('click');
+		});
+	}
+
+	function file_upload_change(){
+		jQuery('#careers-modal .file_uploader input[type="file"]').change(function(){
+			var fileName;
+			var inputFile = jQuery(this);
+			if(inputFile){
+				fileName = inputFile[0].files[0].name;
+				jQuery('.file_name').html(fileName);
+			}
+		});
+	}
 
 })(jQuery);
