@@ -17,6 +17,7 @@ if (function_exists('add_theme_support')){
     add_theme_support('post-thumbnails');
     add_image_size('page_top_banner',1920, 300, true);
     add_image_size('page_slider',600, 506, true);
+    add_image_size('private_service',370, 228, true);
 
 
     // Enables post and comment RSS feed links to head
