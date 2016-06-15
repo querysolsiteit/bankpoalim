@@ -2,6 +2,7 @@
 <?php
     $main_title      = get_field('main_page_title') ? get_field('main_page_title') : get_the_title($post->ID);
     $main_subtitle    = get_field('main_page_subtitle');
+    $contact_form_shortcode    = get_field('contact_form_shortcode');
 ?>
 
 <div id="content" class="wrapper wrapper--mobile-paddingless mb-60 clearfix contact">
@@ -21,12 +22,17 @@
 
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
-              <div class="body-text">
+              <div class="body-text body-text--lg">
                   <?php the_content(); ?>
               </div>
           <?php endwhile; ?>
         <?php endif; ?>
 
+        <?php
+            if($contact_form_shortcode){
+                echo do_shortcode($contact_form_shortcode);
+            }
+        ?>
         <?php get_template_part('inc/mod','page-slider'); ?>
       </div>
     </div>
