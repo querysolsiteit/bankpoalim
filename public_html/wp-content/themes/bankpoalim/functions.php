@@ -145,14 +145,77 @@ function my_pagination()
     global $wp_query;
     $big = 999999999;
     echo paginate_links(array(
-        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-        'format' => '?paged=%#%',
-        'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
+                    'base'    => str_replace($big, '%#%', get_pagenum_link($big)),
+                    'format'  => '?paged=%#%',
+                    'current' => max(1, get_query_var('paged')),
+                    'total'   => $wp_query->max_num_pages
     ));
 }
+
+function custom_search_pagination() {
+    global $wp_query, $post;
+    $big = 999999999;
+    $pages = paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?page=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_next' => false,
+        'type' => 'array',
+        'prev_next' => TRUE,
+        'prev_text' => '<span class="fz-0">Previous page</span><img src="'.THEME.'/images/icons/chevron-left-lg.png" alt="" class="icon">',
+        'next_text' => '<span class="fz-0">Next page</span><img src="'.THEME.'/images/icons/chevron-right-lg.png" alt="" class="icon">',
+            ));
+
+    if (is_array($pages)) {
+        $count = count($pages);
+        $current_page = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+
+        echo '<div class="page-controls">';
+        foreach ($pages as $i => $page) {
+            // if current is first
+            if($current_page == 1){
+                $next_link = get_pagenum_link($current_page+1);
+                if($i == 0){
+                    echo '<button class="btn btn-blank page-controls-page active">'.$page.'</button>';
+                }elseif($i==$count-1){
+                    echo '<button class="btn btn-blank page-controls-right"><a href="'.$next_link.'"><span class="fz-0">Next page</span><img src="'.THEME.'/images/icons/chevron-right-lg.png" alt="" class="icon"></a></button>';
+                }else{
+                    echo '<button class="btn btn-blank page-controls-page">'.$page.'</button>';
+                }
+            }
+            // if current is last
+            else if($current_page == $wp_query->max_num_pages){
+                $prev_link = get_pagenum_link($current_page-1);
+                if($i == 0){
+                    echo '<button class="btn btn-blank page-controls-left"><a href="'.$prev_link.'"><span class="fz-0">Previous page</span><img src="'.THEME.'/images/icons/chevron-left-lg.png" alt="" class="icon"></a></button>';
+                }elseif($i==$wp_query->max_num_pages){
+                    echo '<button class="btn btn-blank page-controls-page active">'.$page.'</button>';
+                }else{
+                    echo '<button class="btn btn-blank page-controls-page">'.$page.'</button>';
+                }
+            }
+            // if current is in the middle
+            else{
+                $next_link = get_pagenum_link($current_page+1);
+                $prev_link = get_pagenum_link($current_page-1);
+                if($i == 0){
+                    echo '<button class="btn btn-blank page-controls-left"><a href="'.$prev_link.'"><span class="fz-0">Previous page</span><img src="'.THEME.'/images/icons/chevron-left-lg.png" alt="" class="icon"></a></button>';
+                }elseif($i == $count-1){
+                    echo '<button class="btn btn-blank page-controls-right"><a href="'.$next_link.'"><span class="fz-0">Next page</span><img src="'.THEME.'/images/icons/chevron-right-lg.png" alt="" class="icon"></a></button>';
+                }elseif($i == $current_page){
+                    echo '<button class="btn btn-blank page-controls-page active">'.$page.'</button>';
+                }else{
+                    echo '<button class="btn btn-blank page-controls-page">'.$page.'</button>';
+                }
+            }
+        }
+        echo '</div>';
+    }
+}
+
 // Add Actions
-add_action('init', 'my_pagination'); // Add our Pagination
+add_action('init', 'custom_search_pagination'); // Add our Pagination
 
 // Add Filters
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
@@ -160,14 +223,15 @@ add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed i
 
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
-       global $post;
-	return '<a class="read_more" href="'. get_permalink($post->ID) . '">'.__('Read More','textdomain').'</a>';
+    global $post;
+    // return '<a class="read_more" href="'. get_permalink($post->ID) . '">'.__('Read More','textdomain').'</a>';
+    return '';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
 // Replaces the excerpt "more" text by a link
 function new_excerpt_length($length) {
-    return 20;
+    return 30;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
@@ -196,15 +260,14 @@ if ( ! function_exists( 'wpex_mce_text_sizes' ) ) {
 }
 add_filter( 'tiny_mce_before_init', 'wpex_mce_text_sizes' );
 
-
-/**
- * Allow shortcodes in Contact Form 7
- *
- * @author WPSnacks.com
- * @link http://www.wpsnacks.com
- */
-function shortcodes_in_cf7( $form ) {
-	$form = do_shortcode( $form );
-	return $form;
+// Highlight text results
+function wps_highlight_results($text){
+    if(is_search()){
+        $sr = get_query_var('s');
+        $keys = explode(" ",$sr);
+        $text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong>'.$sr.'</strong>', $text);
+    }
+     return $text;
 }
-add_filter( 'wpcf7_form_elements', 'shortcodes_in_cf7' );
+add_filter('the_excerpt', 'wps_highlight_results');
+//add_filter('the_title', 'wps_highlight_results');

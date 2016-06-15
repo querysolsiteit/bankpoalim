@@ -3026,7 +3026,7 @@ nav.top-bar form.search {
   padding-bottom: 15px;
   text-align: center;
   color: #6e727a;
-  font-size: 0;
+  font-size: 0px;
 }
 .search-results .page-controls-left,
 .search-results .page-controls-right {

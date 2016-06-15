@@ -20,21 +20,26 @@
               </div>
 
 			  <?php if (have_posts()) : ?>
-			  <ul>
+			  	<ul>
 				  <?php while (have_posts()) : the_post(); ?>
-                <li class="search-results-item">
-					<a href="#" class="db">
-                    <header class="heading heading--no-stripe">
-                      <h5 class="heading-title">Cash Management</h5>
-                    </header>
-					<div class="body-text">
-						<?php echo get_the_excerpt(); ?>
-					</div>
-                    <p class="date"><?php the_date('F j, Y');?></p>
-				</a>
-			</li>
-		<?php endwhile; ?>
+					<li class="search-results-item">
+						<a href="#" class="db">
+							<header class="heading heading--no-stripe">
+							  <h5 class="heading-title"><?php the_title();?></h5>
+							</header>
+							<div class="body-text">
+								<?php the_excerpt(); ?>
+							</div>
+							<p class="date"><?php the_date('F j, Y');?></p>
+						</a>
+					</li>
+				<?php endwhile; ?>
 				</ul>
+				<?php
+					if ( function_exists('custom_search_pagination') ){
+						custom_search_pagination();
+					}
+				?>
 			<?php endif; ?>
 
 	      </div>
