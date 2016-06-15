@@ -19,7 +19,7 @@ if (function_exists('add_theme_support')){
     add_image_size('page_slider',600, 506, true);
     add_image_size('private_service',370, 228, true);
     add_image_size('location',350, 130, true);
-
+    add_image_size('industry_slide',266, 281, true);
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -271,3 +271,15 @@ function wps_highlight_results($text){
 }
 add_filter('the_excerpt', 'wps_highlight_results');
 //add_filter('the_title', 'wps_highlight_results');
+
+
+function print_filters_for( $hook = '' ) {
+    global $wp_filter;
+    if( empty( $hook ) || !isset( $wp_filter[$hook] ) )
+        return;
+
+    print '<pre>';
+    print_r( $wp_filter[$hook] );
+    print '</pre>';
+}
+// print_filters_for( 'the_content' );

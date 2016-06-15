@@ -1,22 +1,20 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
-	<!-- section -->
-	<section role="main">
-	
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-			<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-			<h2>
-				<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-			</h2>
-			
-		</article>
-		<!-- /article -->
-		
-	</section>
-	<!-- /section -->
-	
-<?php get_sidebar(); ?>
+<div id="content" class="wrapper wrapper--mobile-paddingless clearfix mobile-services mb-60">
+  <div class="fluid-wrapper">
+      <div class="white-bg dp">
+        <header class="heading heading--lg">
+      		<h1 class="heading-h">
+				<span class="heading-title"><?php _e( 'Page not found', 'bank' ); ?></span>
+          	</h1>
+        </header>
+		<div class="body-text">
+		  <h2>
+		  	<a href="<?php echo home_url(); ?>"><?php _e( 'Return home ?', 'bank' ); ?></a>
+		  </h2>
+		</div>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>

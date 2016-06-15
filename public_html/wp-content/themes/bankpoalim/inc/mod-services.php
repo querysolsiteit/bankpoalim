@@ -1,4 +1,12 @@
-<div class="white-bg private-pg services-tailored mb-60">
+<?php
+    $class = '';
+    if(is_page_template('template-private')){
+        $class = 'private-pg';
+    }elseif(is_page_template('template-industry.php')){
+        $class ='industry-page';
+    }
+?>
+<div class="white-bg <?php echo $class; ?> services-tailored mb-60">
     <?php
     $services_title    = get_field('services_main_title');
     $services_desc     = get_field('services_main_description');

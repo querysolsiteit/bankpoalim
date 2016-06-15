@@ -2791,8 +2791,8 @@ nav.top-bar form.search {
   margin-top: 10px;
 }
 .industry-page .get-started {
-  background: url("../images/get-started-gray-bg.png") center center no-repeat;
-  background-size: cover;
+  /*background: url("../images/get-started-gray-bg.png") center center no-repeat;
+  background-size: cover;*/
   color: #fff;
 }
 .industry-page .get-started .body-text {
