@@ -1,5 +1,9 @@
 <?php
-$sidebar_boxes = get_field('sidebar_boxes');
+if(is_search()){
+    $sidebar_boxes = get_field('sidebar_boxes','option');
+}else{
+    $sidebar_boxes = get_field('sidebar_boxes');
+}
 if($sidebar_boxes):
     foreach ($sidebar_boxes as $box):
         $title         = $box['title'];

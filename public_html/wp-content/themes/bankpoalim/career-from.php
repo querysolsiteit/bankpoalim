@@ -1,7 +1,7 @@
 <?php
 /**
  * This file is Only for Backup!
- * If 'Careers Form' in cf7 is being deleted/ changed... we can rebuild the form with this code.  
+ * If 'Careers Form' in cf7 is being deleted/ changed... we can rebuild the form with this code.
  */
 ?>
 
@@ -22,3 +22,17 @@
     </div>
   </div>
 </div>
+
+
+<!-- contact Us Form -->
+<form id="contact-form" class="form-theme">
+  <div class="form-group select-wrapper">[select branch class:input-theme class:select-reset "Branch 1" "Branch 2"]</div>
+  <div class="form-group">[text* name class:input-theme placeholder "*Name"]</div>
+  <div class="form-group">[tel* phone class:input-theme placeholder "*Phone"]</div>
+  <div class="form-group">[email* email class:input-theme placeholder "*Email"]</div>
+  <div class="form-group">[text company class:input-theme placeholder "Company Name"]</div>
+  <div class="form-group">[text subject class:input-theme placeholder "subject"]</div>
+  <div class="form-group">[textarea content class:input-theme placeholder "content"]</div>
+  <div class="form-group"><p class="captcha-note">Please type the characters you see in the picture below</p>[recaptcha]</div>
+  <div class="form-group">[submit id:contact-submit class:btn class:btn-default class:fluid "Apply"]</div>
+</form>

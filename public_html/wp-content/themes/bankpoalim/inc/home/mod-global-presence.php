@@ -1,9 +1,9 @@
 <?php
-    $global_bg    = get_field('global_background_image');
-    $global_title = get_field('global_presence_title');
-    $first_text   = get_field('first_text_block');
-    $second_text  = get_field('second_text_block');
-    $shortcode    = get_field('global_button_shortcode');
+    $global_bg    = get_field('global_background_image', 'option');
+    $global_title = get_field('global_presence_title', 'option');
+    $first_text   = get_field('first_text_block', 'option');
+    $second_text  = get_field('second_text_block', 'option');
+    $shortcode    = get_field('global_button_shortcode', 'option');
 ?>
 <div class="global-presence dp" style="background: url(<?php echo $global_bg['url'];?>) 0 0 no-repeat;">
   <a href="#" class="map-location loc-1">

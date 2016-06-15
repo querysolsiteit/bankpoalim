@@ -2901,7 +2901,7 @@ nav.top-bar form.search {
 }
 .locations .body-text {
   margin-top: 25px;
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
 }
 .locations-item {
   margin-top: 30px;
@@ -2953,11 +2953,11 @@ nav.top-bar form.search {
     width: 130%;
   }
 }
-@media screen and (min-width: 940px) {
+/*@media screen and (min-width: 940px) {
   .locations .body-text--lg {
     padding-right: 400px;
   }
-}
+}*/
 @media screen and (max-width: 730px) {
   .locations-item-thumb {
     height: auto;
