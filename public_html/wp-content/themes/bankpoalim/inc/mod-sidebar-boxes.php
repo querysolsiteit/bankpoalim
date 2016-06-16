@@ -1,5 +1,5 @@
 <?php
-if(is_search()){
+if(is_search() || is_category() || is_archive()){
     $sidebar_boxes = get_field('sidebar_boxes','option');
 }else{
     $sidebar_boxes = get_field('sidebar_boxes');

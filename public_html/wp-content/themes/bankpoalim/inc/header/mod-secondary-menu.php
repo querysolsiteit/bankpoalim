@@ -1,8 +1,14 @@
+<?php
+    $sticky = 1;
+    if(is_page()){
+        $sticky = get_field('secondary_menu_sticky');
+    }
+?>
 <?php if(!is_page_template('template-private.php')): ?>
     <div id="second-nav-waypoint"></div>
 <?php endif;?>
 
-<nav id="second-nav" aria-label="Secondary Navigation" role="navigation" class="second-nav">
+<nav id="second-nav" aria-label="Secondary Navigation" role="navigation" data-sticky="<?php echo $sticky;?>" class="second-nav">
     <div class="transition-wrapper">
         <div class="wrapper">
             <?php if(is_page_template('template-private.php')): ?>

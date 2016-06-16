@@ -213,7 +213,9 @@
 						secondNavWaypoint = new Waypoint({
 							element: $secondNavWaypoint,
 							handler: function(dir) {
-								$secondNav.toggleClass('sticky');
+								if($secondNav.data('sticky') == 1){
+									$secondNav.toggleClass('sticky');
+								}
 							},
 							offset: 180
 						});

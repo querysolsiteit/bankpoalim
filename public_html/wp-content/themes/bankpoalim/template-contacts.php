@@ -1,13 +1,14 @@
 <?php /* Template Name:  Contact Us */ get_header();?>
 <?php
-    $main_title      = get_field('main_page_title') ? get_field('main_page_title') : get_the_title($post->ID);
-    $main_subtitle    = get_field('main_page_subtitle');
-    $contact_form_shortcode    = get_field('contact_form_shortcode');
+    $main_title             = get_field('main_page_title') ? get_field('main_page_title') : get_the_title($post->ID);
+    $main_subtitle          = get_field('main_page_subtitle');
+    $contact_form_shortcode = get_field('contact_form_shortcode');
+    $display_sidebar        = get_field('display_sidebar');
 ?>
 
 <div id="content" class="wrapper wrapper--mobile-paddingless mb-60 clearfix contact">
   <div class="fluid-wrapper">
-    <div class="fluid-col">
+    <div class="fluid-col <?php if(!$display_sidebar){ echo 'full_width';}?>">
       <div class="white-bg dp">
         <header class="heading heading--lg">
           <h1 class="heading-h">
@@ -33,14 +34,14 @@
                 echo do_shortcode($contact_form_shortcode);
             }
         ?>
-        <?php get_template_part('inc/mod','page-slider'); ?>
       </div>
     </div>
   </div>
-
-  <div class="fixed-col">
-      <?php get_template_part('inc/mod','sidebar-boxes'); ?>
-  </div>
+  <?php if($display_sidebar):?>
+      <div class="fixed-col">
+          <?php get_template_part('inc/mod','sidebar-boxes'); ?>
+      </div>
+  <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

@@ -47,7 +47,7 @@
                     </div>
 
                 <?php $k++; endwhile; ?>
-            <?php endif; ?>
+            <?php endif; wp_reset_postdata(); ?>
         </div>
     </div>
 </div>

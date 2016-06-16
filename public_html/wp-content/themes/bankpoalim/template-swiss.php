@@ -26,7 +26,7 @@
                         <img src="<?php echo $swiss_logo['url'];?>" alt="" class="swiss-logo" />
                     <?php endif; ?>
                 </div>
-                <div class="body-text swiss"><?php echo get_the_content($post->ID);?></div>
+                <div class="body-text swiss"><?php the_content();?></div>
             </div>
           <?php get_template_part('inc/about/mod','financial-report'); ?>
         </div>

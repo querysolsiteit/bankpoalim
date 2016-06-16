@@ -20,6 +20,8 @@ if (function_exists('add_theme_support')){
     add_image_size('private_service',370, 228, true);
     add_image_size('location',350, 130, true);
     add_image_size('industry_slide',266, 281, true);
+    add_image_size('testimonial',295, 295, true);
+    add_image_size('product_block',240, 342, true);
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');

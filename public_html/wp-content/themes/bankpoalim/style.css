@@ -489,6 +489,9 @@ body {
 .fluid-col {
   margin-right: 377px;
 }
+.fluid-col.full_width{
+    margin-right: 0;
+}
 .fixed-col {
   float: right;
   width: 377px;
@@ -1122,6 +1125,47 @@ body {
   /*background: url("images/global-presence.png") 0 0 no-repeat;*/
   color: #fff;
   overflow: hidden;
+}
+.global-presence .info-icon{
+    width: 20px !important;
+    height: 27px !important;
+    background-position: 0px 0px;
+    -webkit-transition: background 250ms ease-in-out;
+    -moz-transition: background 250ms ease-in-out;
+    -ms-transition: background 250ms ease-in-out;
+    -o-transition: background 250ms ease-in-out;
+    transition: background 250ms ease-in-out;
+}
+.global-presence .info-icon:hover{
+    background-position: 0px -37px !important;
+}
+.global-presence .popover{
+    width: auto;
+}
+.global-presence .popover.top{
+    border-radius: 0;
+    padding: 0;
+}
+.global-presence .popover.top .cq-arrow{
+    display: none;
+}
+.global-presence .popover .popover-content{
+    display: none;
+}
+.global-presence .popover h4.popover-title{
+    background: #1f222b !important;
+    color: #fff !important;
+    padding: 10px !important;
+    border-radius: 0 !important;
+    font-size: 16px;
+    border: none;
+}
+.global_content_wrapper{
+    position: absolute;
+    z-index: 10;
+    width: auto;
+    height: 100%;
+    padding-right: 0 !important;
 }
 .global-presence .heading {
   margin-bottom: 45px;
@@ -3419,7 +3463,7 @@ nav.top-bar form.search {
   top: 0;
   bottom: 1000px;
   left: 0;
-  background: url("../images/home-get-started-bg.png") 0 0 no-repeat;
+  background: url(images/home-get-started-bg.png) 0 0 no-repeat;
   background-size: cover;
 }
 .home-pg-get-started .get-started .dp {
@@ -3507,10 +3551,10 @@ nav.top-bar form.search {
   font-size: 18px;
 }
 .home-pg .bg-a {
-  background-image: url("../images/home-link-bg-a.png");
+  /*background-image: url(images/home-link-bg-a.png);*/
 }
 .home-pg .bg-b {
-  background-image: url("../images/home-link-bg-b.png");
+  /*background-image: url(images/home-link-bg-b.png);*/
 }
 @media screen and (max-width: 1200px) {
   .main-header .home-pg-title {

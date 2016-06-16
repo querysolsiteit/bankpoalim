@@ -1,4 +1,4 @@
-<?php /* Template Name: Testimonials 2 */ get_header();?>
+<?php /* Template Name: Testimonials 1 */ get_header();?>
 
 <?php
     $main_title    = get_field('main_page_title') ? get_field('main_page_title') : get_the_title($post->ID);
@@ -20,7 +20,7 @@
             <?php endif; ?>
         </div>
 
-        <?php get_template_part('inc/mod','testimonials-2'); ?>
+        <?php get_template_part('inc/mod','testimonials-1'); ?>
 
     </div>
 </div>

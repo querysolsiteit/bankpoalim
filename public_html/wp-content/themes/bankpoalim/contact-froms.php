@@ -1,7 +1,7 @@
 <?php
 /**
  * This file is Only for Backup!
- * If 'Careers Form' in cf7 is being deleted/ changed... we can rebuild the form with this code.
+ * If 'Careers Form' Or Contact Form in cf7 is being deleted/ changed... we can rebuild the form with this code.
  */
 ?>
 
@@ -25,6 +25,11 @@
 
 
 <!-- contact Us Form -->
+<?php
+/* Shortcode: Pay attention to the class and id of the form
+    [contact-form-7 id="4" title="Contact Us" html_id="contact-form" html_class="form-theme"]  
+*/
+?>
 <form id="contact-form" class="form-theme">
   <div class="form-group select-wrapper">[select branch class:input-theme class:select-reset "Branch 1" "Branch 2"]</div>
   <div class="form-group">[text* name class:input-theme placeholder "*Name"]</div>

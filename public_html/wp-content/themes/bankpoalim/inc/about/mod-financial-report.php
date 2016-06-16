@@ -4,7 +4,6 @@
     $data_items = get_field('financial_data_items');
     $link_text  = get_field('financial_link_text');
     $link_to    = get_field('financial_link_to');
-
 ?>
 <div class="financial-report dp">
     <div class="row row--with-gutter">
@@ -23,7 +22,8 @@
                 $k=1;
                 foreach ($data_items as $item):
                     $number = $item['number'];
-                    $text = $item['data_text'];
+                    $text   = $item['data_text'];
+                    $icon   = $item['icon'];
                 ?>
                 <div class="col col-1-5 align-center <?php if($k==1){echo 'no-border';}?>">
                     <strong class="number"><?php echo $number;?></strong>

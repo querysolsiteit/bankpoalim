@@ -32,8 +32,9 @@ function custom_button_handler($atts) {
 
     if($class=='default'){
         $img_name = 'thin-w';
-    }else{
+    }elseif($class=='gray'){
         $img_name = 'thin-r';
+    }else{
         $img_name = 'thin';
     }
 
