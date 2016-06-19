@@ -22,6 +22,8 @@ if (function_exists('add_theme_support')){
     add_image_size('industry_slide',266, 281, true);
     add_image_size('testimonial',295, 295, true);
     add_image_size('product_block',240, 342, true);
+    add_image_size('team_member',293, 214, true);
+    add_image_size('modal_team_member',390, 257, true);
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');

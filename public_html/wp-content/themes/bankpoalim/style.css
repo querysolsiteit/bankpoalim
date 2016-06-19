@@ -142,6 +142,9 @@ strong {
   font-weight: 100;
   font-family: 'Univers Regular', sans-serif;
 }
+.body-text strong {
+    font-family: 'Univers Bold', sans-serif;
+}
 body {
   font-family: 'Univers Light', sans-serif;
   font-size: 16px;
