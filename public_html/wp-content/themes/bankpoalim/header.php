@@ -22,6 +22,14 @@
 					$header_class = 'header home-header main-header';
 					$header_id = 'home-header';
 				}
+				if(is_page_template('template-swiss.php')){
+					$header_class = 'header header--swiss';
+					$header_id = 'page-header';
+				}
+				if(is_page_template('template-private.php')){
+					$header_class = 'header header--private home-header';
+					$header_id = 'page-header';
+				}
 				elseif(is_page_template('template-private.php')){
 					$header_class = 'header header--private home-header';
 					$header_id = 'home-header';

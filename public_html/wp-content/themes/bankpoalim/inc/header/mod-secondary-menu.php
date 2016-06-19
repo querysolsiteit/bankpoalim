@@ -16,6 +16,7 @@
             <?php endif;?>
         <?php
             $secondary_menu = get_field('secondary_menu_items','option');
+            $count_cols = count($secondary_menu);
             if($secondary_menu):
         ?>
             <ul class="row row--with-dividers row--equal-height-flex">
@@ -25,8 +26,8 @@
                     $icon     = $second_menu['icon'];
                     $link     = $second_menu['link'] ? $second_menu['link'] : "#";
                 ?>
-                    <li class="col col-1-5">
-                        <a href="<?php echo $link; ?>" class="db fluid second-nav-link align-center">
+                    <li class="col <?php if($count_cols==5){echo 'col-1-5';}elseif($count_cols==6){ echo 'col-1-6';}?>">
+                        <a href="<?php echo $link; ?>" class="db fluid second-nav-link align-center <?php if($count_cols==6){echo '';} ?>">
                             <div class="inner-link-wrapper">
                                 <div class="img-wrapper"><img src="<?php echo $icon['url'];?>" alt=""/></div>
                                 <p><?php echo $title;?></p>

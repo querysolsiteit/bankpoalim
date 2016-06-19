@@ -57,7 +57,10 @@
                     if( ( ($k+1)%$items_in_row == 0 && $k!=0) || $k+1 == $count_items){
                         echo '</ul>';
                     }
-                    $k++; $i++;
+                    $k++;
+                    if(is_page_template('template-management.php')){
+                        $i++;
+                    }
                     endwhile;
             endif; wp_reset_postdata();
         ?>

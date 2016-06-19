@@ -2705,7 +2705,7 @@ nav.top-bar form.search {
 }
 .product-page .corporate-banking-item .thumb img {
   position: relative;
-  right: 50%;
+  /*right: 50%;*/
   height: 100%;
 }
 .product-page .corporate-banking-item .text {
