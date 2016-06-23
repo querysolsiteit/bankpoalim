@@ -4,7 +4,7 @@
         $sticky = get_field('secondary_menu_sticky');
     }
 ?>
-<?php if(!is_page_template('template-private.php')): ?>
+<?php if(!is_page_template('template-private.php') && !is_page_template('template-home.php')): ?>
     <div id="second-nav-waypoint"></div>
 <?php endif;?>
 
@@ -38,5 +38,8 @@
             </ul>
         <?php endif; ?>
         </div>
+        <?php if(is_page_template('template-home.php')):?>
+            <div id="second-nav-waypoint"></div>
+        <?php endif; ?>
     </div>
 </nav>

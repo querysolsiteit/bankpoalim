@@ -22,13 +22,13 @@
 					$header_class = 'header home-header main-header';
 					$header_id = 'home-header';
 				}
-				if(is_page_template('template-swiss.php')){
+				elseif(is_page_template('template-swiss.php')){
 					$header_class = 'header header--swiss';
 					$header_id = 'page-header';
 				}
-				if(is_page_template('template-private.php')){
-					$header_class = 'header header--private home-header';
-					$header_id = 'page-header';
+				elseif(is_page_template('template-home.php')){
+					$header_class = 'header home-header';
+					$header_id = 'home-header';
 				}
 				elseif(is_page_template('template-private.php')){
 					$header_class = 'header header--private home-header';
@@ -56,7 +56,7 @@
 				  </ul>
 				</div>
 			  </nav>
-			  <div id="main-nav-waypoint" <?php if(is_home() || is_front_page()){echo 'class="home-waypoint"';}?>></div>
+			  <div id="main-nav-waypoint" <?php if(is_page_template('template-main.php') || is_page_template('template-home.php')){echo 'class="home-waypoint"';}?>></div>
 			  <nav id="main-nav" aria-label="Main Navigation" role="navigation" class="main-nav">
 				  <?php wp_nav_menu(
 						  array(
@@ -70,14 +70,14 @@
 			  <?php
 					get_template_part('inc/header/mod','mobile-menu');
 
-					if(is_page_template('template-main.php') || is_page_template('template-private.php')){
+					if(is_page_template('template-main.php') || is_page_template('template-private.php') || is_page_template('template-home.php')){
 						get_template_part('inc/home/mod','home-slider');
 					}
-					if(is_page_template('template-private.php')){
+					if(is_page_template('template-private.php') || is_page_template('template-home.php')){
 						get_template_part('inc/header/mod','secondary-menu');
 					}
 
-					if(!is_page_template('template-main.php') && !is_page_template('template-private.php')){
+					if(!is_page_template('template-main.php') && !is_page_template('template-private.php') && !is_page_template('template-home.php')){
 						get_template_part('inc/header/mod','page-banner');
 						get_template_part('inc/header/mod','secondary-menu');
 					}

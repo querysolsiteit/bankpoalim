@@ -60,4 +60,4 @@
 
 <?php get_template_part('inc/mod','team-component'); ?>
 
-<?php get_foter(); ?>
+<?php get_footer(); ?>
